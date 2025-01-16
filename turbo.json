@@ -3,7 +3,8 @@
   "tasks": {
     "release": {
       "dependsOn": ["test", "^test"],
-      "cache": false
+      "cache": false,
+      "env": ["GITHUB_TOKEN", "NPM_TOKEN"]
     },
     "test": {
       "dependsOn": ["build"],
