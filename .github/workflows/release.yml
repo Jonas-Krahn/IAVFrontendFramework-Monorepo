@@ -6,6 +6,7 @@ on:
     branches:
       - main
       - develop
+      - test-release
     paths-ignore:
       - 'SBOM.json'
       - '*.md'
