@@ -37,3 +37,5 @@ export function calculateWidth(
 
   return width / (navbarCollapsed ? 6 : 5);
 }
+
+const test = "TEST";
