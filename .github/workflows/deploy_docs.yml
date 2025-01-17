@@ -50,6 +50,5 @@ jobs:
           
       - name: Generate docs
         run: |
-          ./scripts/unix/prepare-gh-pages.sh
           npm run generate-docs
           ./scripts/unix/commit-docs-generation.sh
