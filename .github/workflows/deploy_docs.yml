@@ -33,9 +33,8 @@ jobs:
         run: |
           git fetch origin
           if ! git rev-parse --verify origin/gh-pages; then
-            git checkout -b feature/new-feature
-            git push -u origin feature/new-feature
-            git branch -r
+            git checkout -b gh-pages
+            git push -u origin gh-pages
             echo "Created new gh-pages branch."
           else
             git checkout gh-pages
