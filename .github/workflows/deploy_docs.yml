@@ -39,9 +39,7 @@ jobs:
             echo "Created new gh-pages branch."
           else
             git checkout gh-pages
-            git merge main
-            # Use all files from main in case of conflict
-            git checkout --theirs .
+            git merge main --strategy-option theirs
             git add .
             echo "Merged main to existing gh-pages branch."
           fi
