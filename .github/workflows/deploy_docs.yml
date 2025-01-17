@@ -23,9 +23,6 @@ jobs:
           
       - name: Set environment variables
         run: echo "GITHUB_ACTOR=${{ github.actor }}" >> $GITHUB_ENV
-      
-      # Make all scripts executable
-      - run: chmod +x scripts/unix/*
 
       - name: Set GitHub identity
         run: |
@@ -33,13 +30,26 @@ jobs:
           git config --global user.name "${GITHUB_ACTOR}"
       
       - name: Prepare gh-pages
-        run: ./scripts/unix/prepare-gh-pages.sh
+        run: |
+          git fetch origin
+          if ! git rev-parse --verify origin/gh-pages; then
+            git checkout -b gh-pages
+            git push -u origin gh-pages
+            echo "Created new gh-pages branch."
+          else
+            git checkout gh-pages
+            git merge main --strategy-option theirs
+            git add .
+            echo "Merged main to existing gh-pages branch."
+          fi
+          
+      - run: chmod +x scripts/unix/*
 
       # Install Turborepo
       - run: npm i
           
       - name: Generate docs
-        run: npm run generate-docs
-      
-      - name: Commit docs
-        run: ./scripts/unix/commit-docs-generation.sh
+        run: |
+          ./scripts/unix/prepare-gh-pages.sh
+          npm run generate-docs
+          ./scripts/unix/commit-docs-generation.sh

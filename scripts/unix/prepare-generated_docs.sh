@@ -1,3 +1,5 @@
+git branch
+
 if [ -d "generated_docs" ]; then
     rm -rf generated_docs
     echo "Deleted existing generated docs"
