@@ -26,18 +26,24 @@ jobs:
           git config --global user.email "${{ github.actor }}@users.noreply.github.com"
           git config --global user.name "${{ github.actor }}"
 
-      - name: Get package version
+      - name: Get package version and name
         id: version
         run: |
+          NAME=$(node -p "require('./package.json').name")
+          echo "PACKAGE_NAME=$NAME" >> $GITHUB_ENV
           VERSION=$(node -p "require('./package.json').version")
           echo "PACKAGE_VERSION=$VERSION" >> $GITHUB_ENV
+          echo "PACKAGE_DOCS_FOLDER=$NAME_$VERSION" >> $GITHUB_ENV
 
       - name: Switch to gh-pages branch
         run: |
           git fetch origin
+          # Check if gh pages branch exists
           if git rev-parse --verify origin/gh-pages; then
             git checkout gh-pages
           else
+            # Create and initialize gh pages branch if it does not exist
+            # (Only for new repositories)
             git checkout --orphan gh-pages
             git rm -rf .
             echo "Initialized gh-pages branch" > README.md
@@ -48,24 +54,28 @@ jobs:
 
       - name: Remove existing version folder if it exists
         run: |
-          if [ -d "$PACKAGE_VERSION" ]; then
-            rm -rf $PACKAGE_VERSION
-            echo "Deleted existing folder for version $PACKAGE_VERSION"
+          # Remove existing docs for this version (for overwriting).
+          if [ -d "$PACKAGE_DOCS_FOLDER" ]; then
+            rm -rf $PACKAGE_DOCS_FOLDER
+            echo "Deleted existing folder for version $PACKAGE_DOCS_FOLDER"
           fi
 
       - name: Create a new version folder in gh-pages
         run: |
-          mkdir -p $PACKAGE_VERSION
-          git add $PACKAGE_VERSION
+          mkdir -p $PACKAGE_DOCS_FOLDER
+          git add $PACKAGE_DOCS_FOLDER
 
       - name: Copy /docs content to version folder
         run: |
+          # Add docs for current version to the docs version folder
           git checkout main -- docs/
-          cp -r docs/* $PACKAGE_VERSION/
-          git add $PACKAGE_VERSION
+          cp -r docs/* $PACKAGE_DOCS_FOLDER/
+          git add $PACKAGE_DOCS_FOLDER
 
       - name: Remove docs folder content only if not empty
         run: |
+          # As the docs were copied to the docs version folder
+          # docs should be empty at the gh pages branch
           if [ -n "$(ls -A docs/ 2>/dev/null)" ]; then
             rm -rf docs/*
             git add docs/
@@ -74,5 +84,5 @@ jobs:
 
       - name: Commit and push changes
         run: |
-          git commit -m "Deploy docs for version $PACKAGE_VERSION" || echo "No changes to commit"
+          git commit -m "Deploy docs for version $PACKAGE_DOCS_FOLDER" || echo "No changes to commit"
           git push origin gh-pages
