@@ -23,17 +23,20 @@ jobs:
           
       - name: Set environment variables
         run: echo "GITHUB_ACTOR=${{ github.actor }}" >> $GITHUB_ENV
+      
+      # Make all scripts executable
+      - run: chmod +x scripts/unix/*
 
       - name: Set GitHub identity
         run: |
           git config --global user.email "${GITHUB_ACTOR}@users.noreply.github.com"
           git config --global user.name "${GITHUB_ACTOR}"
+      
+      - name: Prepare gh-pages
+        run: ./scripts/unix/prepare-gh-pages.sh
 
       # Install Turborepo
       - run: npm i
-
-      # Make all scripts executable
-      - run: chmod +x scripts/unix/*
           
       - name: Generate docs
         run: npm run generate-docs
