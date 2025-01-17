@@ -39,7 +39,6 @@ jobs:
       - run: npm i
           
       - name: Generate docs
-        run: npm run generate-docs
-      
-      - name: Commit docs
-        run: ./scripts/unix/commit-docs-generation.sh
+        run: |
+          npm run generate-docs
+          ./scripts/unix/commit-docs-generation.sh
