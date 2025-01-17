@@ -40,8 +40,8 @@ jobs:
             git checkout gh-pages
           fi
           mkdir main_copy
-          git archive --format=tar main | tar -x -C subfolder
-                
+          git archive --format=tar main | tar -x -C main_copy
+
       - run: chmod +x main/scripts/unix/*
           
       - name: Generate docs
