@@ -1,4 +1,3 @@
-git branch
 git branch -r
 
 git add generated_docs
