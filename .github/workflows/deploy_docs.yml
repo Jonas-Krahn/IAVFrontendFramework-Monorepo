@@ -42,7 +42,6 @@ jobs:
             git add .
             echo "Merged main to existing gh-pages branch."
           fi
-          git branch
           
       - run: chmod +x scripts/unix/*
 
