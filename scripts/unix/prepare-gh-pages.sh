@@ -17,4 +17,4 @@ fi
 # Need to make scripts runnable again since they 
 chmod +x scripts/unix/*
 
-git branch -r
+git branch

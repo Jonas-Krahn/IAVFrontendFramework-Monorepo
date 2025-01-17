@@ -1,4 +1,4 @@
-git branch -r
+git branch
 
 git add generated_docs
 git commit -m "chore: Deploy updated documentation"
