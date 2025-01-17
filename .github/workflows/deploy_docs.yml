@@ -22,4 +22,4 @@ jobs:
           fetch-depth: 0
           
       - name: Commit and push changes
-        run: npm run generate-full-docs:root
+        run: npm run generate-and-push-docs
