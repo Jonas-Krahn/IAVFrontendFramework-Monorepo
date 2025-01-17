@@ -3,11 +3,11 @@ name: Deploy Docs on Release
 on:
   push:
     branches:
-      - main
+      - asd
   release:
     types: [ published ]
     branches:
-      - main
+      - asd
 
 permissions:
   contents: write
