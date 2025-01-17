@@ -23,6 +23,9 @@ jobs:
       
       # Install Turborepo
       - run: npm i
+
+      # Make all scripts executable
+      - run: chmod +x scripts/unix/*
           
       - name: Commit and push changes
         run: npm run generate-docs
