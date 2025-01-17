@@ -32,7 +32,7 @@
       "cache": false
     },
     "//#generate-full-docs:root": {
-      "dependsOn": ["generate-docs"]
+      "dependsOn": ["generate-docs", "//#setup:root"]
     },
     "generate-docs": {
       "dependsOn": ["//#checkout-docs:root"],
