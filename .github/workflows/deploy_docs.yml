@@ -38,17 +38,15 @@ jobs:
             echo "Created new gh-pages branch."
           else
             git checkout gh-pages
-            git merge main --strategy-option theirs
-            git add .
-            echo "Merged main to existing gh-pages branch."
           fi
-          
-      - run: chmod +x scripts/unix/*
-
-      # Install Turborepo
-      - run: npm i
+          mkdir main_copy
+          git archive main | tar -x -C main
+      
+      - run: chmod +x main/scripts/unix/*
           
       - name: Generate docs
         run: |
+          cd main
+          npm i
           npm run generate-docs
           ./scripts/unix/commit-docs-generation.sh
