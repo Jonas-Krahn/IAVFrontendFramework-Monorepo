@@ -1,3 +1,9 @@
+## @work-test-2/test_package-v1.0.0 (2025-01-17)
+
+### Features
+
+* Test Release ([d7b875b](https://github.com/Jonas-Krahn/IAVFrontendFramework-Monorepo/commit/d7b875b9f3e17cc504179a0ed9eb48f9cf5311b3))
+
 ## [1.1.1-dev.2](https://github.com/iavofficial/IAVFrontendFramework/compare/v1.1.1-dev.1...v1.1.1-dev.2) (2024-12-04)
 
 ### Bug Fixes
