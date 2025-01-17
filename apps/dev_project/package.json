@@ -31,7 +31,7 @@
     ]
   },
   "dependencies": {
-    "@work-test-2/frontend-framework": "*",
+    "@work-test-2/core": "*",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router": "^6.9.0",
