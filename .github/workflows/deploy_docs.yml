@@ -26,6 +26,9 @@ jobs:
 
       # Make all scripts executable
       - run: chmod +x scripts/unix/*
+
+      - name: Set environment variables
+        run: echo "GITHUB_ACTOR=${{ github.actor }}" >> $GITHUB_ENV
           
       - name: Commit and push changes
         run: npm run generate-docs
