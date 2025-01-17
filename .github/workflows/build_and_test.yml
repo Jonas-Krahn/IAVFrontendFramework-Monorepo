@@ -28,4 +28,5 @@ jobs:
 
       # Install Turborepo
       - run: npm i
+
       - run: npm run test
