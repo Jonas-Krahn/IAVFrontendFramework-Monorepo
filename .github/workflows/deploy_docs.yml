@@ -25,4 +25,7 @@ jobs:
       - run: npm i
           
       - name: Commit and push changes
-        run: npm run generate-and-push-docs
+        run: npm run generate-docs
+      
+      - name: Commit docs
+        run: ./scripts/unix/commit-docs-generation.sh

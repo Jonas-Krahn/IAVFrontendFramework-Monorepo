@@ -38,7 +38,7 @@
     "test": "turbo run test",
     "build": "turbo run build",
     "release": "turbo run release --concurrency=1",
-    "generate-and-push-docs": "turbo run generate-full-docs:root"
+    "generate-docs": "turbo run generate-docs"
   },
   
   "workspaces": [

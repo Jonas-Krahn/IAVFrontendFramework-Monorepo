@@ -31,9 +31,6 @@
     "//#setup:root": {
       "cache": false
     },
-    "//#generate-full-docs:root": {
-      "dependsOn": ["generate-docs", "//#setup:root"]
-    },
     "generate-docs": {
       "dependsOn": ["//#checkout-docs:root"],
       "cache": false
