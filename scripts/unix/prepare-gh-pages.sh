@@ -10,3 +10,5 @@ git merge main
 # Use all files from main in case of conflict
 git checkout --theirs .
 git add .
+
+chmod +x scripts/unix/*
