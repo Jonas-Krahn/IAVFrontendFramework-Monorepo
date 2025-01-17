@@ -33,10 +33,12 @@
   },
   "scripts": {
     "setup:root": "npm i",
+    "checkout-docs:root": "./scripts/checkout-and-generate-root_docs.sh",
     "dev": "turbo run dev build-live",
     "test": "turbo run test",
     "build": "turbo run build",
-    "release": "turbo run release --concurrency=1"
+    "release": "turbo run release --concurrency=1",
+    "generate-and-push-docs": "turbo run generate-full-docs:root"
   },
   
   "workspaces": [

@@ -30,6 +30,16 @@
     },
     "//#setup:root": {
       "cache": false
+    },
+    "//#generate-full-docs:root": {
+      "dependsOn": ["generate-docs"]
+    },
+    "generate-docs": {
+      "dependsOn": ["//#checkout-docs:root"],
+      "cache": false
+    },
+    "//#checkout-docs:root": {
+      "cache": false
     }
   }
 }
