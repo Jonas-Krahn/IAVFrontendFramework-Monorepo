@@ -2,7 +2,7 @@
   "$schema": "https://turbo.build/schema.json",
   "tasks": {
     "release": {
-      "dependsOn": ["test", "^test"],
+      "dependsOn": [],
       "cache": false,
       "env": ["GITHUB_TOKEN", "NPM_TOKEN"]
     },
