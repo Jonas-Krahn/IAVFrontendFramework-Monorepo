@@ -1,37 +1,47 @@
 #!/bin/bash
-# Set the main directory
-MAIN_DIR="main"
-GENERATED_DOCS_DIR="$MAIN_DIR/generated_docs"
 
-# Iterate through all package folders in generated_docs
-for PACKAGE_DIR in "$GENERATED_DOCS_DIR"/*; do
-  if [ -d "$PACKAGE_DIR" ]; then # Ensure it's a directory
-    PACKAGE_NAME=$(basename "$PACKAGE_DIR")
+# Define source and destination directories
+SOURCE_DIR="main/generated_docs"
+DEST_DIR="generated_docs"
 
-    # Iterate through all version folders in the package directory
-    for VERSION_DIR in "$PACKAGE_DIR"/*; do
-      if [ -d "$VERSION_DIR" ]; then # Ensure it's a directory
-        VERSION_NAME=$(basename "$VERSION_DIR")
-
-        # Create the root package directory if it doesn't exist
-        ROOT_PACKAGE_DIR="$MAIN_DIR/$PACKAGE_NAME"
-        mkdir -p "$ROOT_PACKAGE_DIR"
-
-        # Copy the version folder to the root package directory, overwriting if necessary
-        cp -r "$VERSION_DIR" "$ROOT_PACKAGE_DIR/$VERSION_NAME"
-      fi
-    done
-  fi
-done
-
-if [ -d "root_docs" ]; then
-    rm -rf root_docs
-    echo "Deleted existing root_docs"
+# Ensure source directory exists
+if [ ! -d "$SOURCE_DIR" ]; then
+    echo "Source directory $SOURCE_DIR does not exist. Exiting."
+    exit 1
 fi
 
-mkdir root_docs
+# Iterate over scope directories in the source folder
+for scope in "$SOURCE_DIR"/*; do
+    if [ -d "$scope" ]; then
+        scope_name=$(basename "$scope")
+        
+        # Create the scope folder in the destination if it doesn't exist
+        mkdir -p "$DEST_DIR/$scope_name"
 
-cp -r main/docs/* root_docs/
+        # Iterate over packages within the scope
+        for package in "$scope"/*; do
+            if [ -d "$package" ]; then
+                package_name=$(basename "$package")
+                
+                # Create the package folder in the destination if it doesn't exist
+                mkdir -p "$DEST_DIR/$scope_name/$package_name"
+
+                # Copy version folders, overwriting existing ones
+                for version in "$package"/*; do
+                    if [ -d "$version" ]; then
+                        version_name=$(basename "$version")
+                        echo "Copying $SOURCE_DIR/$scope_name/$package_name/$version_name to $DEST_DIR/$scope_name/$package_name/"
+                        cp -r "$SOURCE_DIR/$scope_name/$package_name/$version_name" "$DEST_DIR/$scope_name/$package_name/"
+                    fi
+                done
+            fi
+        done
+    fi
+done
+
+#mkdir root_docs
+
+#cp -r main/docs/* root_docs/
 
 rm -rf ./main
 

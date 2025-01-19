@@ -1,3 +1,4 @@
+# This script should be executed in the context of packages.
 NAME=$(node -p "require('./package.json').name")
 echo "PACKAGE_NAME=$NAME" >> $GITHUB_ENV
 
