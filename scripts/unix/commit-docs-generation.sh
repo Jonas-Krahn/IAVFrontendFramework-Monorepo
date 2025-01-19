@@ -4,7 +4,7 @@
 SOURCE_DIR="main/generated_docs/packages/"
 DEST_DIR="generated_docs/packages/"
 
-rsync -av --exclude="packages" main/generated_docs generated_docs
+rsync -av --exclude="packages" main/generated_docs/* generated_docs
 
 # Iterate over scope directories in the source folder
 for scope in "$SOURCE_DIR"/*; do
