@@ -33,10 +33,6 @@ for scope in "$SOURCE_DIR"/*; do
     fi
 done
 
-#mkdir root_docs
-
-#cp -r main/docs/* root_docs/
-
 rm -rf main
 
 git add .
