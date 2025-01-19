@@ -4,6 +4,9 @@
 SOURCE_DIR="main/generated_docs"
 DEST_DIR="generated_docs"
 
+basename "$PWD"
+cd /
+
 # Iterate over scope directories in the source folder
 for scope in "$SOURCE_DIR"/*; do
     if [ -d "$scope" ]; then
