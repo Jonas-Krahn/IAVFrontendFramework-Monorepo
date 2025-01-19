@@ -37,7 +37,9 @@ done
 
 #cp -r main/docs/* root_docs/
 
-rm -rf ./main
+rm -rf main
+
+echo "REMOVED MAIN"
 
 git add .
 git commit -m "chore: Deploy updated documentation"
