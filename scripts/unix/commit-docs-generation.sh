@@ -4,7 +4,7 @@
 SOURCE_DIR="main/generated_docs/packages/"
 DEST_DIR="generated_docs/packages/"
 
- Iterate over scope directories in the source folder
+# Iterate over scope directories in the source folder
 for scope in "$SOURCE_DIR"/*; do
     if [ -d "$scope" ]; then
         scope_name=$(basename "$scope")
