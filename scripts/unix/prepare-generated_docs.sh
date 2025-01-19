@@ -3,12 +3,11 @@
 DOCS_DIR="generated_docs"
 PACKAGES_DOCS_DIR="${DOCS_DIR}/packages"
 
-if [! -d $DOCS_DIR ]; then
-    mkdir -p $DOCS_DIR
-fi
+mkdir -p $DOCS_DIR
 
-if [! -d $PACKAGES_DOCS_DIR ]; then
-    mkdir -p $PACKAGES_DOCS_DIR
-fi
+mkdir -p $PACKAGES_DOCS_DIR
 
 cp -r docs/* $DOCS_DIR
+
+cd $DOCS_DIR
+pwd
