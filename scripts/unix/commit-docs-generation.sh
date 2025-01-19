@@ -4,12 +4,6 @@
 SOURCE_DIR="main/generated_docs"
 DEST_DIR="generated_docs"
 
-# Ensure source directory exists
-if [ ! -d "$SOURCE_DIR" ]; then
-    echo "Source directory $SOURCE_DIR does not exist. Exiting."
-    exit 1
-fi
-
 # Iterate over scope directories in the source folder
 for scope in "$SOURCE_DIR"/*; do
     if [ -d "$scope" ]; then
