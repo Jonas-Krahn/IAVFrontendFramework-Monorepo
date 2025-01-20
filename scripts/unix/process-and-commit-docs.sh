@@ -4,12 +4,14 @@
 SOURCE_DIR="main/generated_docs/packages"
 DEST_DIR="generated_docs/packages"
 
+echo "HERE"
+pwd
+
+ls -l
+
 mkdir -p $DEST_DIR
 
 rsync -av --exclude="packages" main/generated_docs/* generated_docs
-
-echo "HERE"
-pwd
 
 # Iterate over scope directories in the source folder
 for scope in "$SOURCE_DIR"/*; do
