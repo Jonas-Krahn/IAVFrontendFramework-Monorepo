@@ -1,5 +1,4 @@
 
-#!/bin/sh
 # IMPORTANT: This script should be executed in the root folder of the repository.
 
 # Define an array of files to copy
