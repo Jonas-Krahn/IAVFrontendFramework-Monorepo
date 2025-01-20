@@ -46,6 +46,7 @@ jobs:
           
       - name: Generate docs
         run: |
+          ./main/scripts/unix/copy-additional-files.sh
           cd main
           npm i
           npm run generate-docs
