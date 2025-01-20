@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Define source and destination directories
-SOURCE_DIR="main/generated_docs/packages/"
-DEST_DIR="generated_docs/packages/"
+SOURCE_DIR="main/generated_docs/packages"
+DEST_DIR="generated_docs/packages"
 
 rsync -av --exclude="packages" main/generated_docs/* generated_docs
 
