@@ -16,16 +16,16 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { useTranslator } from "@iavofficial/frontend-framework/translators";
-import { BLUE3, WHITE } from "@iavofficial/frontend-framework/constants";
-import { CellPaddings, ContentCell } from "@iavofficial/frontend-framework/contentCell";
+import { useTranslator } from "@iavofficial/core/translators";
+import { BLUE3, WHITE } from "@iavofficial/core/constants";
+import { CellPaddings, ContentCell } from "@iavofficial/core/contentCell";
 import {
   ContentLayout,
   LayoutBehaviour,
-} from "@iavofficial/frontend-framework/contentLayout";
+} from "@iavofficial/core/contentLayout";
 import { Button } from "primereact/button";
 import { useState } from "react";
-import { ContentStyleTemplates } from "@iavofficial/frontend-framework/contentStyle";
+import { ContentStyleTemplates } from "@iavofficial/core/contentStyle";
 
 export const ExampleComponent5 = () => {
   const [translationString, setTranslationString] = useState("");
