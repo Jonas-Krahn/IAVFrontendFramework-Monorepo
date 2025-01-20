@@ -7,7 +7,7 @@ DEST_DIR="generated_docs/packages"
 echo "HERE"
 pwd
 
-ls -l
+ls -la
 
 mkdir -p $DEST_DIR
 
