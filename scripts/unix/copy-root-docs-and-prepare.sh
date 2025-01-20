@@ -10,4 +10,4 @@ cp -r docs/* $DOCS_DIR
 
 cd $DOCS_DIR
 
-pdw
+pwd
