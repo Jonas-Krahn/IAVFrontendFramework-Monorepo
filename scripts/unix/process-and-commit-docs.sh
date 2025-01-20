@@ -6,7 +6,9 @@
 SOURCE_DIR="main/generated_docs/packages"
 DEST_DIR="generated_docs/packages"
 
-rsync -av --exclude="packages" main/generated_docs/* generated_docs/
+# Deletes files in root generated docs which do not exist in main generated docs and
+# copies (also overwrites) the other files.
+rsync -av --exclude="packages" --delete main/generated_docs/* generated_docs/
 
 # Copy all version folders to root generated documentation (and overwrite if necessary)
 for scope in "$SOURCE_DIR"/*; do
