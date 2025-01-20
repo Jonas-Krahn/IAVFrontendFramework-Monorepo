@@ -50,5 +50,4 @@ jobs:
           npm i
           npm run generate-docs
           cd ..
-          ./main/scripts/unix/commit-docs-generation.sh
-# TEST
+          ./main/scripts/unix/process-and-commit-docs.sh
