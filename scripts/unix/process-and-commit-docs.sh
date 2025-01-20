@@ -6,6 +6,9 @@ DEST_DIR="generated_docs/packages"
 
 rsync -av --exclude="packages" main/generated_docs/* generated_docs
 
+echo "HERE"
+pwd
+
 # Iterate over scope directories in the source folder
 for scope in "$SOURCE_DIR"/*; do
     if [ -d "$scope" ]; then
