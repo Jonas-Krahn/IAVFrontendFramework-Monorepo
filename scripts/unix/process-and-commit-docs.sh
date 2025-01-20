@@ -4,6 +4,8 @@
 SOURCE_DIR="main/generated_docs/packages"
 DEST_DIR="generated_docs/packages"
 
+mkdir -p $DEST_DIR
+
 rsync -av --exclude="packages" main/generated_docs/* generated_docs
 
 echo "HERE"
