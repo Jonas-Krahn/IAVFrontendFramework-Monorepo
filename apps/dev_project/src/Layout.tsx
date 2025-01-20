@@ -18,11 +18,11 @@
 
 import {SelectButton} from "primereact/selectbutton";
 import {useState} from "react";
-import {UILayer} from "@iavofficial/core/uiLayer";
-import {TranslateFunctionType} from "@iavofficial/core/translationFunction";
-import {BasicAuthenticationView} from "@iavofficial/core/basicAuthenticationView";
-import {BasicContentWrapper} from "@iavofficial/core/basicContentWrapper";
-import {Group} from "@iavofficial/core/group";
+import {UILayer} from "@work-test-3/core/uiLayer";
+import {TranslateFunctionType} from "@work-test-3/core/translationFunction";
+import {BasicAuthenticationView} from "@work-test-3/core/basicAuthenticationView";
+import {BasicContentWrapper} from "@work-test-3/core/basicContentWrapper";
+import {Group} from "@work-test-3/core/group";
 import InfoIcon from "./assets/infoIcon.svg?react";
 import {LegalDocuments} from "./components/legalDocuments";
 import {ExampleComponent1} from "./components/exampleComponent1";
@@ -30,13 +30,13 @@ import {ExampleComponent6} from "./components/exampleComponent6";
 import {ExampleComponent3} from "./components/exampleComponent3";
 import {ExampleComponent4} from "./components/exampleComponent4";
 import {ExampleComponent5} from "./components/exampleComponent5";
-import {simpleNavbarTabFactory} from "@iavofficial/core/simpleNavbarTabFactory";
-import {privilegedNavbarTabFactory} from "@iavofficial/core/privilegedNavbarTabFactory";
+import {simpleNavbarTabFactory} from "@work-test-3/core/simpleNavbarTabFactory";
+import {privilegedNavbarTabFactory} from "@work-test-3/core/privilegedNavbarTabFactory";
 import {ExampleComponent2} from "./components/exampleComponent2";
-import {HeaderPanelElement} from "@iavofficial/core/headerPanelElement";
+import {HeaderPanelElement} from "@work-test-3/core/headerPanelElement";
 import {PrimeIcons} from "primereact/api";
-import {WHITE} from "@iavofficial/core/constants";
-import {HeaderMenuElement} from "@iavofficial/core/headerMenuElement";
+import {WHITE} from "@work-test-3/core/constants";
+import {HeaderMenuElement} from "@work-test-3/core/headerMenuElement";
 
 function Layout() {
     const [selectedButtonOption, setSelectedButtonOption] = useState("Simulated");

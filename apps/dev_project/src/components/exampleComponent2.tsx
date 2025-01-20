@@ -17,14 +17,14 @@
  */
 
 import { useEffect, useState } from "react";
-import { ContentWithBar } from "@iavofficial/core/contentWithBar";
-import { LayoutBehaviour } from "@iavofficial/core/contentLayout";
-import { BasicContentbarWrapper } from "@iavofficial/core/basicContentbarWrapper";
+import { ContentWithBar } from "@work-test-3/core/contentWithBar";
+import { LayoutBehaviour } from "@work-test-3/core/contentLayout";
+import { BasicContentbarWrapper } from "@work-test-3/core/basicContentbarWrapper";
 import { ContentbarExample } from "./contentbarExample";
-import { generateHashOfLength } from "@iavofficial/core/hash";
+import { generateHashOfLength } from "@work-test-3/core/hash";
 import {
   ContentStyleTemplates,
-} from "@iavofficial/core/contentStyle";
+} from "@work-test-3/core/contentStyle";
 
 export const ExampleComponent2 = () => {
   const [selectedId, setSelectedId] = useState("");

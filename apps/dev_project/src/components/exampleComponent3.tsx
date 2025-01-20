@@ -16,7 +16,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { useTranslator } from "@iavofficial/core/translators";
+import { useTranslator } from "@work-test-3/core/translators";
 
 export const ExampleComponent3 = () => {
   const t = useTranslator();

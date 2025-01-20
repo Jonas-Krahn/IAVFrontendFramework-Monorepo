@@ -17,8 +17,8 @@
  */
 
 import {PropsWithChildren, useCallback, useState} from "react";
-import {State} from "@iavofficial/core/dummyAuthenticationProvider";
-import {AuthContext, Credentials} from "@iavofficial/core/auth";
+import {State} from "@work-test-3/core/dummyAuthenticationProvider";
+import {AuthContext, Credentials} from "@work-test-3/core/auth";
 
 interface Props {
     additionalContextValues?: { [key: string]: any };

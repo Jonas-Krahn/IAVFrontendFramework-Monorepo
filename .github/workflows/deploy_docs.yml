@@ -49,4 +49,5 @@ jobs:
           cd main
           npm i
           npm run generate-docs
+          pwd
           ./main/scripts/unix/process-and-commit-docs.sh
