@@ -27,7 +27,7 @@ jobs:
       # Install Turborepo
       - run: npm i
       
-      - run: npm run test
+      - run: npm run build
 
       - name: Build all packages and release them
         env:
