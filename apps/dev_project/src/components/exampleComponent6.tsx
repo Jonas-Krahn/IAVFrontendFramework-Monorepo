@@ -19,8 +19,8 @@
 import {
   ContentLayout,
   LayoutBehaviour,
-} from "@test-ff-monorepo-2/core/contentLayout";
-import { ContentStyleTemplates } from "@test-ff-monorepo-2/core/contentStyle";
+} from "@test-ff-monorepo-3/core/contentLayout";
+import { ContentStyleTemplates } from "@test-ff-monorepo-3/core/contentStyle";
 
 export const ExampleComponent6 = () => {
   return (
