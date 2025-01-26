@@ -1,3 +1,9 @@
+## @test-ff-monorepo-4/core-v1.0.0 (2025-01-26)
+
+### Features
+
+* Test release ([fc106e3](https://github.com/Jonas-Krahn/IAVFrontendFramework-Monorepo/commit/fc106e359b7c7839c76feff5066da09aa9575cef))
+
 ## [1.1.1-dev.2](https://github.com/iavofficial/IAVFrontendFramework/compare/v1.1.1-dev.1...v1.1.1-dev.2) (2024-12-04)
 
 ### Bug Fixes
