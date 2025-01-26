@@ -16,7 +16,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { WHITE } from "@work-test-3/core/constants";
+import { WHITE } from "@test-ff-monorepo/core/constants";
 import { Button } from "primereact/button";
 
 export interface Props {
