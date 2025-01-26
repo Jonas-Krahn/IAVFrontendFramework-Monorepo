@@ -18,11 +18,11 @@
 
 import {SelectButton} from "primereact/selectbutton";
 import {useState} from "react";
-import {UILayer} from "@test-ff-monorepo/core/uiLayer";
-import {TranslateFunctionType} from "@test-ff-monorepo/core/translationFunction";
-import {BasicAuthenticationView} from "@test-ff-monorepo/core/basicAuthenticationView";
-import {BasicContentWrapper} from "@test-ff-monorepo/core/basicContentWrapper";
-import {Group} from "@test-ff-monorepo/core/group";
+import {UILayer} from "@test-ff-monorepo-2/core/uiLayer";
+import {TranslateFunctionType} from "@test-ff-monorepo-2/core/translationFunction";
+import {BasicAuthenticationView} from "@test-ff-monorepo-2/core/basicAuthenticationView";
+import {BasicContentWrapper} from "@test-ff-monorepo-2/core/basicContentWrapper";
+import {Group} from "@test-ff-monorepo-2/core/group";
 import InfoIcon from "./assets/infoIcon.svg?react";
 import {LegalDocuments} from "./components/legalDocuments";
 import {ExampleComponent1} from "./components/exampleComponent1";
@@ -30,13 +30,13 @@ import {ExampleComponent6} from "./components/exampleComponent6";
 import {ExampleComponent3} from "./components/exampleComponent3";
 import {ExampleComponent4} from "./components/exampleComponent4";
 import {ExampleComponent5} from "./components/exampleComponent5";
-import {simpleNavbarTabFactory} from "@test-ff-monorepo/core/simpleNavbarTabFactory";
-import {privilegedNavbarTabFactory} from "@test-ff-monorepo/core/privilegedNavbarTabFactory";
+import {simpleNavbarTabFactory} from "@test-ff-monorepo-2/core/simpleNavbarTabFactory";
+import {privilegedNavbarTabFactory} from "@test-ff-monorepo-2/core/privilegedNavbarTabFactory";
 import {ExampleComponent2} from "./components/exampleComponent2";
-import {HeaderPanelElement} from "@test-ff-monorepo/core/headerPanelElement";
+import {HeaderPanelElement} from "@test-ff-monorepo-2/core/headerPanelElement";
 import {PrimeIcons} from "primereact/api";
-import {WHITE} from "@test-ff-monorepo/core/constants";
-import {HeaderMenuElement} from "@test-ff-monorepo/core/headerMenuElement";
+import {WHITE} from "@test-ff-monorepo-2/core/constants";
+import {HeaderMenuElement} from "@test-ff-monorepo-2/core/headerMenuElement";
 
 function Layout() {
     const [selectedButtonOption, setSelectedButtonOption] = useState("Simulated");

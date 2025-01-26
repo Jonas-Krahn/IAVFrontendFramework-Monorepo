@@ -17,15 +17,15 @@
  */
 
 import { useEffect, useReducer } from "react";
-import { ContentWithBar } from "@test-ff-monorepo/core/contentWithBar";
-import { LayoutBehaviour } from "@test-ff-monorepo/core/contentLayout";
-import { generateHashOfLength } from "@test-ff-monorepo/core/hash";
+import { ContentWithBar } from "@test-ff-monorepo-2/core/contentWithBar";
+import { LayoutBehaviour } from "@test-ff-monorepo-2/core/contentLayout";
+import { generateHashOfLength } from "@test-ff-monorepo-2/core/hash";
 import { ContentbarExampleWithText } from "./contentbarExampleWithText";
-import { BasicContentbarWrapper } from "@test-ff-monorepo/core/basicContentbarWrapper";
-import { TranslateFunctionType } from "@test-ff-monorepo/core/translationFunction";
+import { BasicContentbarWrapper } from "@test-ff-monorepo-2/core/basicContentbarWrapper";
+import { TranslateFunctionType } from "@test-ff-monorepo-2/core/translationFunction";
 import {
   ContentStyleTemplates,
-} from "@test-ff-monorepo/core/contentStyle";
+} from "@test-ff-monorepo-2/core/contentStyle";
 
 const initialState: ExampleArrayObject = {
   exampleArray: [],

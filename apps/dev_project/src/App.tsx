@@ -17,8 +17,8 @@
  */
 
 import translationES from "./assets/translations/es.json";
-import {GlobalDataLayer} from "@test-ff-monorepo/core/globalDataLayer";
-import {DummyAuthenticationProvider} from "@test-ff-monorepo/core/dummyAuthenticationProvider";
+import {GlobalDataLayer} from "@test-ff-monorepo-2/core/globalDataLayer";
+import {DummyAuthenticationProvider} from "@test-ff-monorepo-2/core/dummyAuthenticationProvider";
 import translationEN from "./assets/translations/en.json";
 import translationDE from "./assets/translations/de.json";
 import translationDECH from "./assets/translations/de-CH.json";
