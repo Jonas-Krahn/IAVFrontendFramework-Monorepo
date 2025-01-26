@@ -11,7 +11,7 @@
     "test": "jest --passWithNoTests",
     "lint": "eslint src/**/*.{js,ts,tsx}",
     "format": "prettier --write \"src/**/*.{ts,tsx,js,jsx,json}\" && prettier --write \"docs/*\"",
-    "release": "npx semantic-release",
+    "release": "npx semantic-release && sleep 60",
     "generate-docs": "../../scripts/unix/generate-docs-for-package.sh"
   },
   "eslintConfig": {
