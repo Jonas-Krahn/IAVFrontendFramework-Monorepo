@@ -16,7 +16,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { CellPaddings, ContentCell } from "@test-ff-monorepo-3/core/contentCell";
+import { CellPaddings, ContentCell } from "@test-ff-monorepo-4/core/contentCell";
 import { Button } from "primereact/button";
 import { useState } from "react";
 

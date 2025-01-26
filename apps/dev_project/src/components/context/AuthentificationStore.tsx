@@ -17,8 +17,8 @@
  */
 
 import {PropsWithChildren, useCallback, useState} from "react";
-import {State} from "@test-ff-monorepo-3/core/dummyAuthenticationProvider";
-import {AuthContext, Credentials} from "@test-ff-monorepo-3/core/auth";
+import {State} from "@test-ff-monorepo-4/core/dummyAuthenticationProvider";
+import {AuthContext, Credentials} from "@test-ff-monorepo-4/core/auth";
 
 interface Props {
     additionalContextValues?: { [key: string]: any };
